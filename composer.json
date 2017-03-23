@@ -1,0 +1,24 @@
+{
+  "name": "drmvc/demo",
+  "type": "project",
+  "description": "Small demo site based on DrMVC Framework",
+  "homepage": "https://drmvc.com/",
+  "license": "MIT",
+  "keywords": [
+    "drmvc",
+    "example"
+  ],
+  "authors": [
+    {
+      "name": "Paul Rock",
+      "email": "paul@drteam.rocks",
+      "homepage": "https://drteam.rocks/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^5.5 || ^7.0",
+    "drmvc/framework": "dev-master"
+  },
+  "minimum-stability": "stable"
+}
