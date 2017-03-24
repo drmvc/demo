@@ -1,4 +1,4 @@
-<?php namespace Application\Models;
+<?php namespace DrMVC\App\Models;
 
 /**
  * Class Example
@@ -12,7 +12,7 @@ class Example
      *
      * @param $first
      * @param $second
-     * @return array
+     * @return bool
      */
     public function exampleTest($first, $second)
     {

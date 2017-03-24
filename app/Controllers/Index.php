@@ -1,10 +1,11 @@
-<?php namespace Application\Controllers;
+<?php namespace DrMVC\App\Controllers;
 
-use System\Core\View;
-use System\Core\Helpers\UUID;
+use DrMVC\Core\Controller;
+use DrMVC\Core\View;
+use DrMVC\Core\Helpers\UUID;
 
 // Get the example model
-use Application\Models\Example as Model_Example;
+use DrMVC\App\Models\Example as Model_Example;
 
 /**
  * Class Index

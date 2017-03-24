@@ -1,6 +1,6 @@
-<?php namespace Application\Controllers;
+<?php namespace DrMVC\App\Controllers;
 
-use System\Core\Controller;
+use DrMVC\Core\Controller;
 
 /**
  * Class Main

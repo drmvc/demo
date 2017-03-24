@@ -1,6 +1,7 @@
-<?php namespace Application\Controllers;
+<?php namespace DrMVC\App\Controllers;
 
-use System\Core\View;
+use DrMVC\Core\Controller;
+use DrMVC\Core\View;
 
 /**
  * Class Page
@@ -30,9 +31,9 @@ class Page extends Main
 
         $data['lng'] = $this->language;
 
-        View::render('templates/header', $data);
-        View::render('page', $data);
-        View::render('templates/footer', $data);
+        $this->view->render('templates/header', $data);
+        $this->view->render('page', $data);
+        $this->view->render('templates/footer', $data);
     }
 
     /**
@@ -49,9 +50,9 @@ class Page extends Main
 
         $data['lng'] = $this->language;
 
-        View::render('templates/header', $data);
-        View::render('page_another', $data);
-        View::render('templates/footer', $data);
+        $this->view->render('templates/header', $data);
+        $this->view->render('page_another', $data);
+        $this->view->render('templates/footer', $data);
     }
 
 }

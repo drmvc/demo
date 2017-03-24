@@ -1,13 +1,4 @@
-<?php namespace System\Core;
-
-/**
- * If we open page http://example.com/page
- */
-Route::set('page', 'page')
-    ->defaults(array(
-        'controller' => 'Page',
-        'action' => 'index',
-    ));
+<?php namespace DrMVC\Core;
 
 /**
  * If we open page http://example.com/error or wrong path.

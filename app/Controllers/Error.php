@@ -1,6 +1,7 @@
-<?php namespace Application\Controllers;
+<?php namespace DrMVC\App\Controllers;
 
-use System\Core\View;
+use DrMVC\Core\Controller;
+use DrMVC\Core\View;
 
 /**
  * Class Error
@@ -25,8 +26,8 @@ class Error extends Main
         $data['styles'] = $this->styles;
         $data['scripts'] = $this->scripts;
 
-        View::render('templates/header', $data);
-        View::render('error', $data);
-        View::render('templates/footer', $data);
+        $this->view->render('templates/header', $data);
+        $this->view->render('error', $data);
+        $this->view->render('templates/footer', $data);
     }
 }

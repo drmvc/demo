@@ -1,38 +1,36 @@
 <?php defined('SYSPATH') OR die('No direct script access.');
 
-return array(
-	/**
-	 * Site title
-	 */
-	'SITETITLE' => 'DrMVC',
+/**
+ * Site title
+ */
+define('SITETITLE', 'DrMVC');
 
-	/**
-	 * Site main URL (optional)
-	 */
-	'URL' => 'http://drmvc',
+/**
+ * Site main URL (optional)
+ */
+define('URL', 'http://drmvc');
 
-	/**
-	 * Site path relative to the URL
-	 */
-	'DIR' => '/',
+/**
+ * Site path relative to the URL
+ */
+define('DIR', '/');
 
-	/**
-	 * Server side session prefix
-	 */
-	'SESSION_PREFIX' => 'drmvc_',
+/**
+ * Server side session prefix
+ */
+define('SESSION_PREFIX', 'drmvc_');
 
-	/**
-	 * Default language code
-	 */
-	'LANGUAGE_CODE' => 'en',
+/**
+ * Default language code
+ */
+define('LANGUAGE_CODE', 'en');
 
-	/**
-	 * Theme name
-	 */
-	'THEME' => 'default',
+/**
+ * Theme name
+ */
+define('THEME', 'default');
 
-	/**
-	 * Generate sitemap.xml
-	 */
-	'SITEMAP_ENABLED' => true,
-);
+/**
+ * Generate sitemap.xml
+ */
+define('SITEMAP_ENABLED', true);
