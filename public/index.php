@@ -1,23 +1,15 @@
 <?php
-
-ini_set('memory_limit', '-1');
+// Relative path to your application root folder
+$apppath = __DIR__ . '/../app';
 
 // Enable autoloader
 include __DIR__ . "/../vendor/autoload.php";
 
-// Application and system paths
-$apppath = __DIR__ . '/../app';
-$syspath = __DIR__ . '/../vendor/drmvc/framework';
-
 // Include framework bootstrap
-include $syspath . "/bootstrap.php";
-
-// Load class
-use DrMVC\Core\Session;
-use DrMVC\Core\Request;
+include __DIR__ . "/../vendor/drmvc/framework/bootstrap.php";
 
 // Start session
-Session::init();
+DrMVC\Core\Session::init();
 
 // Render current page
-Request::factory(true)->execute()->render();
+DrMVC\Core\Request::factory(true)->execute()->render();
