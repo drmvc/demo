@@ -12,11 +12,11 @@ class Example
      *
      * @param $first
      * @param $second
-     * @return bool
+     * @return array
      */
     public function exampleTest($first, $second)
     {
-        return true;
+        return array($first, $second);
     }
 
 }

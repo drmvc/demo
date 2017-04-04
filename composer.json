@@ -18,7 +18,8 @@
   ],
   "require": {
     "php": "^5.5 || ^7.0",
-    "drmvc/framework": "dev-master"
+    "drmvc/framework": "dev-master",
+    "drmvc/helpers": "dev-master"
   },
   "minimum-stability": "stable"
 }

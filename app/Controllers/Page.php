@@ -1,8 +1,5 @@
 <?php namespace DrMVC\App\Controllers;
 
-use DrMVC\Core\Controller;
-use DrMVC\Core\View;
-
 /**
  * Class Page
  * @package Application\Controllers

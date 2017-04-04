@@ -1,11 +1,8 @@
 <?php namespace DrMVC\App\Controllers;
 
-use DrMVC\Core\Controller;
-use DrMVC\Core\View;
 use DrMVC\Core\Helpers\UUID;
-
-// Get the example model
-use DrMVC\App\Models\Example as Model_Example;
+use DrMVC\App\Models\Example;
+use DrMVC\Helpers\Cleaner;
 
 /**
  * Class Index
@@ -14,7 +11,7 @@ use DrMVC\App\Models\Example as Model_Example;
 class Index extends Main
 {
     /**
-     * @var Model_Example
+     * @var Example
      */
     public $_example;
 
@@ -26,7 +23,7 @@ class Index extends Main
         parent::__construct();
 
         // Create test class
-        $this->_example = new Model_Example();
+        $this->_example = new Example();
     }
 
     /**
@@ -51,6 +48,9 @@ class Index extends Main
             // Generate the uuid
             'uuid' => UUID::v4()
         );
+
+        // Simple cleaning
+        $this->view->data['dummy'] = Cleaner::run('~!@#$%^&*()_+');
 
         // Render the templates
         $this->view->render('templates/header');

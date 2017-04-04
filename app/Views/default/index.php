@@ -12,6 +12,7 @@
 
 <div class="well">
     <p>UUID v4: <?php echo $data['uuid']; ?></p>
+    <p>Dummy: <?php echo $data['dummy']; ?></p>
 </div>
 
 <ul class="nav nav-pills">
