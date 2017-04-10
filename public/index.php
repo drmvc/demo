@@ -6,7 +6,7 @@ $apppath = __DIR__ . '/../app';
 include __DIR__ . "/../vendor/autoload.php";
 
 // Include framework bootstrap
-include __DIR__ . "/../vendor/drmvc/framework/bootstrap.php";
+include __DIR__ . "/../vendor/drmvc/framework/src/bootstrap.php";
 
 // Start session
 DrMVC\Core\Session::init();

@@ -1,8 +1,8 @@
 <?php namespace DrMVC\App\Controllers;
 
-use DrMVC\Core\Helpers\UUID;
-use DrMVC\App\Models\Example;
+use DrMVC\Helpers\UUID;
 use DrMVC\Helpers\Cleaner;
+use DrMVC\App\Models\Example;
 
 /**
  * Class Index
