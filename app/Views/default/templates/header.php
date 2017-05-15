@@ -10,23 +10,16 @@
 
     <!-- Vendor CSS -->
     <?php
-    $i = '0';
-    while ($i < count($data['styles_vendor'])) {
-        echo '<link rel="stylesheet" href="/vendor/' . $data['styles_vendor'][$i] . '">' . "\n";
-        $i++;
-    }
-    unset($i);
+    foreach ($data['vendor_styles'] as $item)
+        echo '<link rel="stylesheet" href="/vendor/' . $item . '">' . "\n";
     ?>
 
-    <!-- Site CSS -->
+    <!-- Application CSS -->
     <?php
-    $i = '0';
-    while ($i < count($data['styles'])) {
-        echo '<link rel="stylesheet" href="/css/' . $data['styles'][$i] . '">' . "\n";
-        $i++;
-    }
-    unset($i);
+    foreach ($data['styles'] as $item)
+        echo '<link rel="stylesheet" href="/css/' . $item . '">' . "\n";
     ?>
+
 </head>
 
 <body style="padding-top: 70px;">
@@ -42,13 +35,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<?php echo DIR; ?>"><?php echo SITETITLE; ?></a>
+            <a class="navbar-brand" href="/"><?php echo SITETITLE; ?></a>
         </div>
         <!--/.nav-header -->
 
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="<?php echo DIR; ?>error">Error</a></li>
+                <li><a href="/page">Other page</a></li>
+                <li><a href="/page/another">Another Page</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/error">Error Page</a></li>
             </ul>
         </div>
         <!--/.nav-collapse -->
