@@ -3,7 +3,7 @@
 /**
  * Site title
  */
-define('SITETITLE', 'DrMVC');
+define('SITETITLE', 'DrMVC Framework');
 
 /**
  * Site main URL (optional)
