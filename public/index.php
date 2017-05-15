@@ -2,13 +2,8 @@
 // Enable autoloader
 include __DIR__ . "/../vendor/autoload.php";
 
-// Set the application directory
-$apppath = '../app/';
-
-// Define the absolute paths for configured directories
-define('DOCROOT', realpath(dirname(__FILE__)) . DIRECTORY_SEPARATOR);
-define('APPPATH', realpath($apppath) . DIRECTORY_SEPARATOR);
-define('SYSPATH', realpath(__DIR__) . DIRECTORY_SEPARATOR);
+// Set path of the application directory
+define('APPPATH', __DIR__ . '/../app');
 
 // Default configurations
 DrMVC\Core\Config::load('config');
