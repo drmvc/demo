@@ -3,7 +3,7 @@
 include __DIR__ . "/../vendor/autoload.php";
 
 // Set path of the application directory
-define('APPPATH', __DIR__ . '/../app');
+define('APPPATH', __DIR__ . '/../app/');
 
 // Default configurations
 DrMVC\Core\Config::load('config');
