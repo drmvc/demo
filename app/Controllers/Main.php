@@ -4,7 +4,7 @@ use DrMVC\Core\Controller;
 
 /**
  * Class Main
- * @package Application\Controllers
+ * @package DrMVC\App\Controllers
  */
 class Main extends Controller
 {
@@ -23,25 +23,30 @@ class Main extends Controller
     {
         parent::__construct();
 
-        // Vendor styles
-        $this->styles_vendor = array(
-            'bootstrap/dist/css/bootstrap.min.css',
-        );
-        // Site styles
-        $this->styles = array();
-
-        // Vendor scripts
-        $this->scripts_vendor = array(
-            'jquery/dist/jquery.min.js',
-            'bootstrap/dist/js/bootstrap.min.js',
-        );
-        // Site scripts
-        $this->scripts = array();
-
-        // Include Application/Language/LANGUAGE_CODE/index.php file
+        // Include APPPATH/Language/LANGUAGE_CODE/index.php file
         $this->language->load('index');
-        // Include Application/Language/LANGUAGE_CODE/second.php file
+        // Include APPPATH/Language/LANGUAGE_CODE/second.php file
         $this->language->load('second');
+
+        // Data array available in view namespace into $data variable
+        $this->view->data = array(
+            // Add languages into work array
+            'lng' => $this->language,
+            // Vendor styles
+            'vendor_styles' => array(
+                'bootstrap/dist/css/bootstrap.min.css',
+            ),
+            // Vendor scripts
+            'vendor_scripts' => array(
+                'jquery/dist/jquery.min.js',
+                'bootstrap/dist/js/bootstrap.min.js',
+            ),
+            // Application styles
+            'styles' => array(),
+            // Application scripts
+            'scripts' => array()
+        );
+
     }
 
 }

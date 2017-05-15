@@ -2,7 +2,7 @@
 
 /**
  * Class Example
- * @package Application\Models
+ * @package DrMVC\App\Models
  */
 class Example
 {

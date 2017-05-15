@@ -2,7 +2,7 @@
 
 /**
  * Class Error
- * @package Application\Controllers
+ * @package DrMVC\App\Controllers
  */
 class Error extends Main
 {
@@ -16,15 +16,10 @@ class Error extends Main
 
     public function action_index()
     {
-        $data['title'] = '404';
+        $this->view->data['title'] = '404';
 
-        $data['styles_vendor'] = $this->styles_vendor;
-        $data['scripts_vendor'] = $this->scripts_vendor;
-        $data['styles'] = $this->styles;
-        $data['scripts'] = $this->scripts;
-
-        $this->view->render('templates/header', $data);
-        $this->view->render('error', $data);
-        $this->view->render('templates/footer', $data);
+        $this->view->render('templates/header');
+        $this->view->render('error');
+        $this->view->render('templates/footer');
     }
 }

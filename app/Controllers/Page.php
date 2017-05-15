@@ -2,7 +2,7 @@
 
 /**
  * Class Page
- * @package Application\Controllers
+ * @package DrMVC\App\Controllers
  */
 class Page extends Main
 {
@@ -21,16 +21,9 @@ class Page extends Main
     {
         $data['title'] = $this->language->get('page');
 
-        $data['styles_vendor'] = $this->styles_vendor;
-        $data['scripts_vendor'] = $this->scripts_vendor;
-        $data['styles'] = $this->styles;
-        $data['scripts'] = $this->scripts;
-
-        $data['lng'] = $this->language;
-
-        $this->view->render('templates/header', $data);
-        $this->view->render('page', $data);
-        $this->view->render('templates/footer', $data);
+        $this->view->render('templates/header');
+        $this->view->render('page');
+        $this->view->render('templates/footer');
     }
 
     /**
@@ -40,16 +33,9 @@ class Page extends Main
     {
         $data['title'] = $this->language->get('page_another');
 
-        $data['styles_vendor'] = $this->styles_vendor;
-        $data['scripts_vendor'] = $this->scripts_vendor;
-        $data['styles'] = $this->styles;
-        $data['scripts'] = $this->scripts;
-
-        $data['lng'] = $this->language;
-
-        $this->view->render('templates/header', $data);
-        $this->view->render('page_another', $data);
-        $this->view->render('templates/footer', $data);
+        $this->view->render('templates/header');
+        $this->view->render('page_another');
+        $this->view->render('templates/footer');
     }
 
 }
