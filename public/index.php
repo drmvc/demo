@@ -1,12 +1,20 @@
 <?php
-// Relative path to your application root folder
-$apppath = __DIR__ . '/../app';
-
 // Enable autoloader
 include __DIR__ . "/../vendor/autoload.php";
 
-// Include framework bootstrap
-include __DIR__ . "/../vendor/drmvc/framework/src/bootstrap.php";
+// Set the application directory
+$apppath = '../app/';
+
+// Define the absolute paths for configured directories
+define('DOCROOT', realpath(dirname(__FILE__)) . DIRECTORY_SEPARATOR);
+define('APPPATH', realpath($apppath) . DIRECTORY_SEPARATOR);
+define('SYSPATH', realpath(__DIR__) . DIRECTORY_SEPARATOR);
+
+// Default configurations
+DrMVC\Core\Config::load('config');
+
+// Apply routes
+DrMVC\Core\Config::load('routes');
 
 // Start session
 DrMVC\Core\Session::init();

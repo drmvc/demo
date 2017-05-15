@@ -8,6 +8,11 @@
     "drmvc",
     "example"
   ],
+  "autoload": {
+    "psr-4": {
+      "DrMVC\\App\\": "app/"
+    }
+  },
   "authors": [
     {
       "name": "Paul Rock",
