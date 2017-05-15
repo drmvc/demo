@@ -5,6 +5,7 @@ nbproject
 .kate-swp
 ~
 .directory
+/logs/
 /composer.lock
 /vendor/
 /public/vendor/
