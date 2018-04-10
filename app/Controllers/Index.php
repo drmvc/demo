@@ -18,4 +18,16 @@ class Index
         header('Content-Type: application/json');
         $response->getBody()->write($json);
     }
+
+    public function action_test(Request $request, Response $response, $args)
+    {
+        $out = [
+            'test1',
+            'test2'
+        ];
+
+        $json = json_encode($out);
+        header('Content-Type: application/json');
+        $response->getBody()->write($json);
+    }
 }
