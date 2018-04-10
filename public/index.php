@@ -1,18 +1,20 @@
 <?php
-// Enable autoloader
-include __DIR__ . "/../vendor/autoload.php";
+require_once __DIR__ . '/../vendor/autoload.php';
 
-// Set path of the application directory
-define('APPPATH', __DIR__ . '/../app/');
+$config = new \DrMVC\Config();
+$config->load(__DIR__ . '/../app/database.php', 'database');
 
-// Default configurations
-DrMVC\Core\Config::load('config');
+use \Psr\Http\Message\ServerRequestInterface as Request;
+use \Psr\Http\Message\ResponseInterface as Response;
 
-// Apply routes
-DrMVC\Core\Config::load('routes');
+$app = new \DrMVC\App($config);
+$app
+    ->get('/zzz', \MyApp\Controllers\Index::class)
+    ->get('/aaa', function(Request $request, Response $response, $args) {
+        print_r($args);
+    })
+    ->error(function(Request $request, Response $response) {
+        echo 'zzz';
+    });
 
-// Start session
-DrMVC\Core\Session::init();
-
-// Render current page
-DrMVC\Core\Request::factory(true)->execute()->render();
+echo $app->run();

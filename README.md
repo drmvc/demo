@@ -10,7 +10,6 @@ Small demo site based on DrMVC Framework
 
     # Now we need to install dependent files
     composer update
-    bower update
 
     # Let's run the php localhost server
     cd public

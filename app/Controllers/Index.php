@@ -1,47 +1,21 @@
-<?php namespace DrMVC\App\Controllers;
+<?php
 
-use DrMVC\Helpers\UUID;
-use DrMVC\Helpers\Cleaner;
-use DrMVC\App\Models\Example;
+namespace MyApp\Controllers;
 
-/**
- * Class Index
- * @package DrMVC\App\Controllers
- */
-class Index extends Main
+use \Psr\Http\Message\ServerRequestInterface as Request;
+use \Psr\Http\Message\ResponseInterface as Response;
+
+class Index
 {
-    /**
-     * @var Example
-     */
-    public $_example;
-
-    /**
-     * Index constructor
-     */
-    public function __construct()
+    public function action_index(Request $request, Response $response, $args)
     {
-        parent::__construct();
+        $out = [
+            'dummy',
+            'array'
+        ];
 
-        // Create test class
-        $this->_example = new Example();
+        $json = json_encode($out);
+        header('Content-Type: application/json');
+        $response->getBody()->write($json);
     }
-
-    /**
-     * Index page action
-     */
-    public function action_index()
-    {
-        // Page title
-        $this->view->data['title'] = $this->language->get('index');
-
-        // Simple examples how to work with methods
-        $this->view->data['uuid'] = UUID::v4();
-        $this->view->data['dummy'] = Cleaner::run('~!@#$%^&*()_+');
-
-        // Render the templates
-        $this->view->render('templates/header');
-        $this->view->render('index');
-        $this->view->render('templates/footer');
-    }
-
 }
