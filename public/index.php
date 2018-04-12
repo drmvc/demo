@@ -14,9 +14,6 @@ $app
     ->get('/zzz/<action>', \MyApp\Controllers\Index::class)
     ->get('/aaa', function(Request $request, Response $response, $args) {
         print_r($args);
-    })
-    ->error(function(Request $request, Response $response) {
-        $response->getBody()->write('error triggered');
     });
 
 echo $app->run();
