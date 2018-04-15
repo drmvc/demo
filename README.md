@@ -25,3 +25,5 @@ Now you can open your web-browser and go to http://localhost:8000
 # Links
 
 * [DrMVC project website](https://drmvc.com/)
+* [DrMVC Starter-kit](https://github.com/drmvc/app)
+* [DrMVC Demo](https://github.com/drmvc/demo)
