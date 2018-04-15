@@ -20,7 +20,7 @@ gulp.task('clean:img', function () {
 });
 
 gulp.task('img', ['clean:img'], function () {
-    return gulp.src('app/resources/img/**/*')
+    return gulp.src('resources/img/**/*')
         .pipe(gulp.dest('public/resources/img'));
 });
 
@@ -29,7 +29,7 @@ gulp.task('clean:css', function () {
 });
 
 gulp.task('scss', ['clean:css'], function () {
-    gulp.src(['app/resources/scss/theme.scss'], {base: 'app/resources/scss/'})
+    gulp.src(['resources/scss/theme.scss'], {base: 'resources/scss/'})
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(prefix('last 3 version'))
@@ -38,7 +38,7 @@ gulp.task('scss', ['clean:css'], function () {
         .pipe(gulpif(process.env.DEV_MODE === 'true', sourcemaps.write('maps')))
         .pipe(gulp.dest('public/resources/css'));
 
-    gulp.src(['app/resources/scss/**/*.css'])
+    gulp.src(['resources/scss/**/*.css'])
         .pipe(gulp.dest('public/resources/css'));
 
     gulp.src([
@@ -51,7 +51,7 @@ gulp.task('clean:js', function () {
 });
 
 gulp.task('js', ['clean:js'], function () {
-    gulp.src(['app/resources/js/**/*.js'])
+    gulp.src(['resources/js/**/*.js'])
         .pipe(named())
         .pipe(gulpif(process.env.DEV_MODE !== 'true', uglify()))
         .pipe(gulp.dest('public/resources/js'));
@@ -67,8 +67,8 @@ gulp.task('js', ['clean:js'], function () {
 gulp.task('watch', function () {
     livereload.listen();
 
-    gulp.watch('app/resources/img/**', ['img']).on('change', livereload.changed);
-    gulp.watch('app/resources/icons/**', ['icons']).on('change', livereload.changed);
-    gulp.watch('app/resources/scss/**', ['scss']).on('change', livereload.changed);
-    gulp.watch('app/resources/js/**', ['js']).on('change', livereload.changed);
+    gulp.watch('resources/img/**', ['img']).on('change', livereload.changed);
+    gulp.watch('resources/icons/**', ['icons']).on('change', livereload.changed);
+    gulp.watch('resources/scss/**', ['scss']).on('change', livereload.changed);
+    gulp.watch('resources/js/**', ['js']).on('change', livereload.changed);
 });
