@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% include "head/title.twig" %}
+    {% include "head/meta.twig" %}
+    {% include "head/styles.twig" %}
+</head>
+<body class="text-center">
+{% block header %}{% endblock %}
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    {% include "head/navbar.twig" %}
+    <main role="main" class="inner cover">
+        {% block content %}{% endblock %}
+    </main>
+    {% include "foot/footer.twig" %}
+</div>
+{% include "foot/scripts.twig" %}
+</body>
+</html>
