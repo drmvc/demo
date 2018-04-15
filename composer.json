@@ -24,8 +24,8 @@
   ],
   "require": {
     "php": "^7.0",
-    "drmvc/framework": "^3.0.0",
+    "drmvc/framework": "dev-master",
     "twig/twig": "^2.4"
   },
-  "minimum-stability": "RC"
+  "minimum-stability": "dev"
 }
