@@ -20,7 +20,7 @@ Let's run the php localhost server
     cd public
     php -S localhost:8000
 
-Now you can open your web-browser and to http://localhost:8000
+Now you can open your web-browser and go to http://localhost:8000
 
 # Links
 
