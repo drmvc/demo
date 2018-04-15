@@ -6,11 +6,12 @@
   "license": "MIT",
   "keywords": [
     "drmvc",
-    "example"
+    "example",
+    "demo"
   ],
   "autoload": {
     "psr-4": {
-      "MyApp\\": "app/"
+      "MyApp\\": "./app/"
     }
   },
   "authors": [
@@ -23,7 +24,8 @@
   ],
   "require": {
     "php": "^7.0",
-    "drmvc/framework": "@dev"
+    "drmvc/framework": "^3.0.0",
+    "twig/twig": "^2.4"
   },
-  "minimum-stability": "dev"
+  "minimum-stability": "RC"
 }

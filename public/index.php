@@ -1,19 +1,18 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
+// Config instance
 $config = new \DrMVC\Config();
-$config->load(__DIR__ . '/../app/database.php', 'database');
 
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
-
+// Application instance
 $app = new \DrMVC\App($config);
+
+// Set routes
 $app
     ->get('/', \MyApp\Controllers\Index::class)
-    ->get('/zzz', \MyApp\Controllers\Index::class)
-    ->get('/zzz/<action>', \MyApp\Controllers\Index::class)
-    ->get('/aaa', function(Request $request, Response $response, $args) {
-        print_r($args);
-    });
+    ->get('/dynamic/<action>', \MyApp\Controllers\Pages::class)
+    ->get('/static/', \MyApp\Controllers\Pages::class . ':page1')
+    ->get('/static/other', \MyApp\Controllers\Pages::class . ':page2');
 
+// Run worker
 echo $app->run();
