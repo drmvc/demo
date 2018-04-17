@@ -28,5 +28,5 @@ Now you can open your web-browser and go to http://localhost:8000
 
 ## Links
 
-* [DrMVC project website](https://drmvc.com/)
+* [DrMVC Project](https://drmvc.com/)
 * [DrMVC Application](https://github.com/drmvc/demo)
