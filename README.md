@@ -1,15 +1,19 @@
-# DrMVC Demo
+# DrMVC Application - Demo
 
-Small demo site based on DrMVC Framework
+Small demo application based on [DrMVC Application Skeleton](https://github.com/drmvc/app).
 
 ## How to install
 
 For first we need clone the demo project
 
-    git clone https://github.com/drmvc/demo.git my_project
-    cd my_projects
+    git clone https://github.com/drmvc/demo.git application
+    cd application
 
-Now we need to install dependent files and build static files
+For enabling support of `gulpfile.js` need to install `gulp` tool
+
+    npm install -g gulp
+
+Now need to install dependencies and build static files
 
     composer update
     npm install
@@ -22,8 +26,7 @@ Let's run the php localhost server
 
 Now you can open your web-browser and go to http://localhost:8000
 
-# Links
+## Links
 
 * [DrMVC project website](https://drmvc.com/)
-* [DrMVC Starter-kit](https://github.com/drmvc/app)
-* [DrMVC Demo](https://github.com/drmvc/demo)
+* [DrMVC Application](https://github.com/drmvc/demo)
